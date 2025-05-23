@@ -42,13 +42,29 @@ if sum==num:
 else:
     print("Not a armstrong")
 
-#15.Fibonacci Series upto nth term
+#15.Armstrong  umbers in a range
+num1,num2=list(map(int,input().split()))
+lst=[]
+for i in range(num1,num2+1):
+    power=len(str(i))
+    temp=i
+    sum=0
+    while temp>0:
+        digit=temp%10
+        sum+=digit**power
+        temp=temp//10
+    if sum==i:
+        lst.append(i)
+print(*lst)
+
+#16.Fibonacci Series upto nth term
 n=int(input())
 a,b=0,1
 for i in range(0,n):
     a,b=b,a+b
     print(a,end=" ")
-#16.Nth term fibanocci
+
+#17.Nth term fibanocci
 n=int(input())
 a,b=0,1
 count=0
@@ -57,7 +73,7 @@ while count<n:
     count+=1
 print(a)
 
-#17.Factorial of a Number
+#18.Factorial of a Number
 num=int(input())
 fact=1
 if num<0:
@@ -68,7 +84,7 @@ for i in range(1,num+1):
     fact=i*fact
 print(fact)  
 
-#18.find Power of a number
+#19.find Power of a number
 a,b=list(map(int,input().split()))
 print(pow(a,b))
 
@@ -78,27 +94,14 @@ for i in range(b):
     result*=a
 print(result)
 
-#19.find factors of a number
+#20.find factors of a number
 num=int(input())
 for i in range(1,num+1):
     if num%i==0:
         print(i,end=" ")
     continue
 
-#20.Prime factor of a number
-n1 = int(input())
-lst = []
-def find_factors(n1):
-    if n1<4:
-        lst.append(n1)
-        return lst
-    for i in range(2,n1):
-        while(n1%i==0):
-            lst.append(i)
-            n1 = n1/i
-    return lst
 
-print(*set(find_factors(n1)))
 
 
 
