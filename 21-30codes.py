@@ -112,3 +112,22 @@ def friendly_pair(num1,num2):
 num1,num2=list(map(int,input().split()))
 friendly_pair(num1,num2)
 
+#29. HCF or GCD
+num1=int(input())
+num2=int(input())
+for i in range(1,min(num1,num2)):
+    if num1%i==0 and num2%i==0:
+        hcf=i
+print(hcf)
+
+#30.LCM
+num1=int(input())
+num2=int(input())
+for i in range(1,min(num1,num2)):
+    if num1%i==0 and num2%i==0:
+        hcf=i
+lcm=(num1*num2)//hcf
+print("LCm is:",lcm)
+
+
+
