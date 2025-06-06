@@ -1,4 +1,4 @@
-#51.count the number of days in a given month of a year
+'''#51.count the number of days in a given month of a year
 month=int(input())
 year=int(input())
 if month==2 and year%400==0 or year%4==0 and year%100!=0:
@@ -47,7 +47,16 @@ a=float(input())
 b=float(input())
 c=float(input())
 r1,r2=find_roots(a,b,c)
-print(r1,r2)
+print(r1,r2)'''
+
+#recursions
+#55.Power of a Number
+base=int(input())
+power=int(input())
+result=base
+for i in range(power-1):
+    result=base*result
+print(result)
 
 
 
