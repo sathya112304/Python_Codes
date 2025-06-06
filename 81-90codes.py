@@ -106,6 +106,8 @@ arr1=[1,2,6,3,7]
 arr2=[10,7,45,3,7]
 arr1.sort()
 arr2.sort(reverse=True)
+if len(arr1)!=len(arr2):
+    print("Not possible")
 sum=0
 for i in range(len(arr1)):
     sum+=arr1[i]*arr2[i]
