@@ -1,4 +1,4 @@
-'''#51.count the number of days in a given month of a year
+#51.count the number of days in a given month of a year
 month=int(input())
 year=int(input())
 if month==2 and year%400==0 or year%4==0 and year%100!=0:
@@ -109,26 +109,10 @@ n1=27
 n2=18
 print(hcf(n1,n2))
 
-#61 LCM using recursion
-def hcf(n1,n2):
-    if n1==0:
-        return n2
-    elif n2==0:
-        return n1
-    return hcf(n2,n1%n2)
-def lcm(n1,n2):
-    return (n1*n2)//hcf(n1,n2)
-n1=23
-n2=69
-print(lcm(n1,n2))'''
 
-#Length of string using recursion
-def length(str):
-    if str=="":
-        return 0
-    return 1+length(str[1:])
-str="programming"
-print(length(str))
+
+
+
 
 
 
