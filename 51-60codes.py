@@ -47,7 +47,7 @@ a=float(input())
 b=float(input())
 c=float(input())
 r1,r2=find_roots(a,b,c)
-print(r1,r2)'''
+print(r1,r2)
 
 #recursions
 #55.Power of a Number
@@ -57,6 +57,86 @@ result=base
 for i in range(power-1):
     result=base*result
 print(result)
+
+#56. Prime using recursion
+def prime(n,i=2):
+    if n==i:
+        return True
+    elif n%i==0:
+        return False
+    return prime(n,i+1)
+n=int(input())
+if prime(n):
+    print("Its a prime")
+else:
+    print("Its not a prime")
+
+#57.Largest in a array using recursion
+def largest(A,n):
+    if n==1:
+        return A[0]
+    return max(A[n-1],largest(A,n-1))
+A=[1,4,45,6,-50,10,2]
+n=len(A)
+print(largest(A,n))
+
+#58 Smallest in a array using recursion
+def smallest(A,n):
+    if n==1:
+        return A[0]
+    return min(A[n-1],smallest(A,n-1))
+A=[1,4,3,-5,-4,8,6]
+n=len(A)
+print(smallest(A,n))
+
+#59 Reversing a number using recursion
+def reverse(n):
+    A=[]
+    if n==0:
+        return ""
+    return str(n%10)+reverse(n//10)
+n=int(input())
+print(reverse(n))
+
+#60 HCF using recursion
+def hcf(n1,n2):
+    if n1==0:
+        return n2
+    elif n2==0:
+        return n1
+    return hcf(n2,n1%n2)
+n1=27
+n2=18
+print(hcf(n1,n2))
+
+#61 LCM using recursion
+def hcf(n1,n2):
+    if n1==0:
+        return n2
+    elif n2==0:
+        return n1
+    return hcf(n2,n1%n2)
+def lcm(n1,n2):
+    return (n1*n2)//hcf(n1,n2)
+n1=23
+n2=69
+print(lcm(n1,n2))'''
+
+#Length of string using recursion
+def length(str):
+    if str=="":
+        return 0
+    return 1+length(str[1:])
+str="programming"
+print(length(str))
+
+
+
+
+
+
+
+
 
 
 
